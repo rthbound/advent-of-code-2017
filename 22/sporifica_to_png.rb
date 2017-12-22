@@ -30,8 +30,8 @@ class SporificaToPng
       }
     }
 
-    img.save('2017-d22-part2.png', :interlace => true)
+    img.save('2017-day22-part2.png', :interlace => true)
   end
 end
 
-FartToPng.new.draw
+SporificaToPng.new.draw
