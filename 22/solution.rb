@@ -31,10 +31,12 @@ class Sporifica
     max = [max_y, max_x].max
     min = [min_y, min_x].min
 
-    min.upto(max) do |y|
-      puts min.upto(max).map { |x|
-        print node_status_at(Complex(x,y)) + " "
-      }.join
+    File.open("2017-day22-part1.txt", "w+") do |f|
+      min.upto(max) do |y|
+        f.puts min.upto(max).map { |x|
+          node_status_at(Complex(x,y))
+        }.join
+      end
     end
 
     puts "======================="
